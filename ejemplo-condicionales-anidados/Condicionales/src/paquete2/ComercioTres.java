@@ -75,14 +75,30 @@ public class ComercioTres {
                 }
             }
         }
-          
+        //Mi solucion, funciona ya que utilice 2 variables para darle valor a porcentajeSeguro  
         if (porcentajeSeguro >= 1 && porcentajeSeguro <= 15) {
             porcentajeFinal = porcentajeSeguro;
         } else {
             if (porcentajeSeguro < 1 && porcentajeSeguro > 15) {
                 porcentajeFinal = 10;
-                
+        //Opcion 1, funciona porque si le esta dando un valor a la variable porcentajeSeguro        
+        if (porcentajeSeguro >= 1 && porcentajeSeguro <=15 )
+            porcentajeSeguro = porcentajeSeguro +0;
+        } else {
+            porcentajeSeguro = 10;
             }
+        //Opción 2, funciona pero esta incompleta ya que falta especificar el 1porcentajeSeguro<1 
+        if (porcentajeSeguro > 15) {
+            porcentajeSeguro = 10;
+        }
+        // Opción 3, funciona bien ya que no altera su resultado
+        if (porcentajeSeguro < 1 || porcentajeSeguro > 15) {
+            porcentajeSeguro = 10;
+        }
+        // Opción 4, No funciona bien ya que si utiliza el 1 y el 15 tambien va a utilizar el 10
+        if (porcentajeSeguro < 1 && porcentajeSeguro > 15) {
+            porcentajeSeguro = 10;
+        }
         }
         adicionalSeguro = (sueldoBasico * porcentajeFinal) / 100;
         sueldoFinal = adicionalSeguro + bono + sueldoBasico;
