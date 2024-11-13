@@ -75,12 +75,13 @@ public class ComercioTres {
                 }
             }
         }
-
+          
         if (porcentajeSeguro >= 1 && porcentajeSeguro <= 15) {
             porcentajeFinal = porcentajeSeguro;
         } else {
             if (porcentajeSeguro < 1 && porcentajeSeguro > 15) {
                 porcentajeFinal = 10;
+                
             }
         }
         adicionalSeguro = (sueldoBasico * porcentajeFinal) / 100;
